@@ -1,0 +1,65 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign cv = site.data.cv %}
+{% assign L = page.lang %}
+
+<header class="page-head">
+  <h1>{{ t.cv }}</h1>
+  {% if site.cv_pdf and site.cv_pdf != "" %}
+  <a class="button" href="{{ site.cv_pdf | relative_url }}" download>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+    {{ t.download_cv }}
+  </a>
+  {% endif %}
+</header>
+
+<section class="cv-section">
+  <h2>{{ t.education }}</h2>
+  {% for ed in cv.education %}
+  {% assign e = ed[L] %}
+  <article class="card">
+    <div class="badge" aria-hidden="true">∑</div>
+    <div class="card-body">
+      <h3>{{ e.school }}</h3>
+      <p class="meta">{{ e.place }} • {{ e.dates }}</p>
+      <p class="role">{{ e.degree }}</p>
+      <p class="tags"><strong>{{ t.courses }}</strong>{% for c in ed.courses[L] %} <code>{{ c }}</code>{% endfor %}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="cv-section">
+  <h2>{{ t.experience }}</h2>
+  {% for job in cv.experience %}
+  {% assign j = job[L] %}
+  <article class="card">
+    <div class="badge" aria-hidden="true">{{ job.initials[L] }}</div>
+    <div class="card-body">
+      <h3>{{ j.org }}</h3>
+      <p class="meta">{{ j.place }} • {{ j.dates }}</p>
+      <p class="role">{{ j.role }}</p>
+      <ul>
+        {% for p in j.points %}
+        <li>{{ p }}</li>
+        {% endfor %}
+      </ul>
+      <p class="tags" dir="ltr"><strong>{{ t.tech }}</strong>{% for x in job.tech %} <code>{{ x }}</code>{% endfor %}</p>
+    </div>
+  </article>
+  {% endfor %}
+</section>
+
+<section class="cv-section">
+  <h2>{{ t.skills }}</h2>
+  <div class="skills">
+    {% for group in cv.skills %}
+    <div class="skill-group">
+      <h3>{{ group[L] }}</h3>
+      <p class="tags" dir="ltr">{% for s in group.list %}<code>{{ s }}</code> {% endfor %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign prefix = "" %}{% if page.lang == "fa" %}{% assign prefix = "/fa" %}{% endif %}
+{% assign words = content | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+
+<article class="post">
+  <a class="back" href="{{ prefix | append: '/updates/' | relative_url }}"><span class="arrow" aria-hidden="true">←</span> {{ t.back }}</a>
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <span class="sep" aria-hidden="true"></span> <span>{{ minutes }} {{ t.min_read }}</span>
+  </p>
+  <div class="prose post-body">
+    {{ content }}
+  </div>
+</article>

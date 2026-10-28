@@ -1,0 +1,53 @@
+{% assign other = "fa" %}{% assign prefix = "" %}
+{% if page.lang == "fa" %}{% assign other = "en" %}{% assign prefix = "/fa" %}{% endif %}
+
+{% comment %} Work out where the language switch should point. {% endcomment %}
+{% assign alt_url = "/fa/" %}{% if other == "en" %}{% assign alt_url = "/" %}{% endif %}
+{% if page.layout == "post" %}
+  {% assign alt_url = "/fa/updates/" %}{% if other == "en" %}{% assign alt_url = "/updates/" %}{% endif %}
+  {% if page.ref %}
+    {% assign alt = site.posts | where: "ref", page.ref | where: "lang", other | first %}
+    {% if alt %}{% assign alt_url = alt.url %}{% endif %}
+  {% endif %}
+{% elsif page.ref %}
+  {% assign alt = site.pages | where: "ref", page.ref | where: "lang", other | first %}
+  {% if alt %}{% assign alt_url = alt.url %}{% endif %}
+{% endif %}
+
+{% assign section = page.ref %}{% if page.layout == "post" %}{% assign section = "updates" %}{% endif %}
+
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <a class="identity" href="{{ prefix | append: '/' | relative_url }}">
+      <span class="avatar-wrap" data-initials="{% if page.lang == "fa" %}م م{% else %}MM{% endif %}"><img class="avatar" src="https://github.com/{{ site.github_username }}.png?size=240" alt="" width="96" height="96" onerror="this.remove()"></span>
+      <span class="name">{{ t.name }}</span>
+    </a>
+    <p class="tagline">{{ t.tagline }}</p>
+
+    <nav class="nav" aria-label="Main">
+      <a href="{{ prefix | append: '/' | relative_url }}"{% if section == "home" %} class="active" aria-current="page"{% endif %}>{{ t.home }}</a>
+      <a href="{{ prefix | append: '/updates/' | relative_url }}"{% if section == "updates" %} class="active" aria-current="page"{% endif %}>{{ t.updates }}</a>
+      <a href="{{ prefix | append: '/cv/' | relative_url }}"{% if section == "cv" %} class="active" aria-current="page"{% endif %}>{{ t.cv }}</a>
+      <a href="{{ prefix | append: '/contact/' | relative_url }}"{% if section == "contact" %} class="active" aria-current="page"{% endif %}>{{ t.contact }}</a>
+    </nav>
+
+    <div class="social">
+      <a href="https://github.com/{{ site.github_username }}" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      </a>
+      <a href="mailto:{{ site.email }}" title="Email" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5zM3.5 6l8.5 7 8.5-7"/></svg>
+      </a>
+      <a class="cv-link" href="{{ prefix | append: '/cv/' | relative_url }}" title="{{ t.cv }}">{{ t.cv }}</a>
+    </div>
+
+    {% if site.show_persian %}
+    <a class="lang-switch" href="{{ alt_url | relative_url }}" hreflang="{{ other }}" lang="{{ other }}">
+      <span class="globe" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.5 9h17M3.5 15h17M12 3c2.5 2.6 3.6 5.6 3.6 9s-1.1 6.4-3.6 9c-2.5-2.6-3.6-5.6-3.6-9S9.5 5.6 12 3z"/></svg>
+      </span>
+      {{ t.switch_label }}
+    </a>
+    {% endif %}
+  </div>
+</aside>

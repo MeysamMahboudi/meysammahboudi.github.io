@@ -1,0 +1,45 @@
+#####################################################################
+#  Site settings — edit these values, then commit. GitHub rebuilds
+#  the site automatically within a minute or two.
+#####################################################################
+
+title: Meysam Mahboudi
+title_fa: میثم مهبودی
+description: Personal website of Meysam Mahboudi — mathematics student and business data analysis intern.
+url: "https://meysammahboudi.github.io"
+baseurl: ""
+
+# Persian version: set to false to hide it — the language button and
+# Persian posts disappear from the site. Set back to true to bring it back.
+show_persian: true
+
+github_username: meysammahboudi
+email: mahboudi.me@gmail.com
+work_email: m.mahboudi@behnoodph.com
+
+# Put your resume at assets/cv.pdf, then set this to: /assets/cv.pdf
+# While it is empty, the "Download PDF" buttons stay hidden.
+cv_pdf: ""
+
+# Posts (the Updates section) live at /updates/YYYY/MM/DD/title/
+permalink: /updates/:year/:month/:day/:title/
+timezone: Asia/Tehran
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: en
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - راهنما.md
+  - Gemfile
+  - Gemfile.lock

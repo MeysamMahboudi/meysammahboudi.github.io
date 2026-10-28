@@ -1,0 +1,62 @@
+# Interface text in both languages.
+en:
+  name: Meysam Mahboudi
+  tagline: Mathematics student at KHU · Business data analysis intern
+  home: Home
+  updates: Updates
+  cv: CV
+  contact: Contact
+  switch_label: فارسی
+  skip: Skip to
+  latest: Latest updates
+  all_updates: All updates
+  no_updates: Nothing here yet.
+  updates_intro: Longer notes, write-ups and announcements. Each one has its own link you can share.
+  read: Read
+  back: All updates
+  download_cv: Download PDF
+  education: Education
+  experience: Experience
+  skills: Skills
+  courses: Selected courses
+  tech: Tools
+  present: Present
+  contact_intro: The fastest way to reach me is by email. I'm happy to hear about collaborations, projects, internships and research opportunities.
+  personal_email: Email
+  work_email: Work email
+  github: GitHub
+  min_read: min read
+  lang_en: EN
+  lang_fa: FA
+  rights: All rights reserved.
+
+fa:
+  name: میثم مهبودی
+  tagline: دانشجوی ریاضی دانشگاه خوارزمی و کارآموز تحلیل داده کسب‌وکار
+  home: خانه
+  updates: یادداشت‌ها
+  cv: رزومه
+  contact: تماس
+  switch_label: English
+  skip: رفتن به
+  latest: تازه‌ترین یادداشت‌ها
+  all_updates: همه یادداشت‌ها
+  no_updates: هنوز مطلبی منتشر نشده است.
+  updates_intro: یادداشت‌های بلندتر، توضیحات و اطلاعیه‌ها. هر مطلب لینک جداگانه‌ای دارد که می‌توانید آن را بفرستید.
+  read: خواندن
+  back: همه یادداشت‌ها
+  download_cv: دریافت PDF
+  education: تحصیلات
+  experience: سوابق
+  skills: مهارت‌ها
+  courses: درس‌های شاخص
+  tech: ابزارها
+  present: اکنون
+  contact_intro: سریع‌ترین راه ارتباط با من ایمیل است. از شنیدن پیشنهاد همکاری، پروژه، کارآموزی و فرصت‌های پژوهشی خوشحال می‌شوم.
+  personal_email: ایمیل
+  work_email: ایمیل کاری
+  github: گیت‌هاب
+  min_read: دقیقه مطالعه
+  lang_en: EN
+  lang_fa: فا
+  rights: همه حقوق محفوظ است.

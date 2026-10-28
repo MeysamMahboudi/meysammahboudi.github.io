@@ -1,0 +1,120 @@
+# Your resume, in both languages. Edit the text here — the CV page
+# and the home page both read from this file.
+
+home:
+  en:
+    hello: Hey, I'm Meysam.
+    lead: Third-year student in Mathematics and its Applications at Kharazmi University (KHU) in Tehran, and an intern in business data analysis.
+    current_label: Currently working as
+    current: Business Data Analysis Intern at Behnoodph
+    about:
+      - I like problems where mathematics meets real decisions — taking messy data and turning it into numbers people can actually act on. Right now that means designing pricing algorithms for the housing market and building financial reports and dashboards for a business team.
+      - I also care about how a product feels to use, not only whether the model behind it is right, which is why I spend time on web and product design.
+    focus_title: What I'm working on
+    focus:
+      - "**Smart housing pricing** — product manager on algorithms that estimate fair prices for houses and apartments."
+      - "**Business data analysis** — reports and dashboards with Excel and Power BI at Behnoodph."
+      - "**Mathematics** — analysis, numerical methods and algebra at KHU."
+    reach: "Feel free to reach out at"
+  fa:
+    hello: سلام، من میثم هستم.
+    lead: دانشجوی سال سوم ریاضیات و کاربردها در دانشگاه خوارزمی تهران و کارآموز تحلیل داده کسب‌وکار.
+    current_label: در حال حاضر
+    current: کارآموز تحلیل داده کسب‌وکار در بهنود
+    about:
+      - به مسئله‌هایی علاقه دارم که ریاضی در آن‌ها به تصمیم‌های واقعی می‌رسد؛ یعنی داده‌های نامرتب را به عددهایی تبدیل کنم که بشود بر اساسشان تصمیم گرفت. این روزها این کار یعنی طراحی الگوریتم‌های قیمت‌گذاری برای بازار مسکن و ساختن گزارش‌ها و داشبوردهای مالی برای یک تیم کسب‌وکار.
+      - برایم مهم است که یک محصول چه حسی به کاربر می‌دهد، نه فقط اینکه مدل پشت آن درست کار کند؛ برای همین روی طراحی وب و طراحی محصول هم وقت می‌گذارم.
+    focus_title: روی چه چیزهایی کار می‌کنم
+    focus:
+      - "**قیمت‌گذاری هوشمند مسکن** — مدیر محصول پروژه طراحی الگوریتم‌هایی که قیمت منصفانه خانه و آپارتمان را تخمین می‌زنند."
+      - "**تحلیل داده کسب‌وکار** — گزارش و داشبورد با Excel و Power BI در بهنود."
+      - "**ریاضیات** — آنالیز، روش‌های عددی و جبر در دانشگاه خوارزمی."
+    reach: "برای ارتباط با من ایمیل بزنید:"
+
+education:
+  - en:
+      degree: B.Sc. in Mathematics and its Applications
+      school: Kharazmi University (KHU)
+      place: Tehran, Iran
+      dates: 2024 – Present
+    fa:
+      degree: کارشناسی ریاضیات و کاربردها
+      school: دانشگاه خوارزمی
+      place: تهران
+      dates: ۱۴۰۳ – اکنون
+    courses:
+      en: [Mathematical Analysis, Numerical Analysis, Linear Algebra and Matrices, Abstract Algebra]
+      fa: [آنالیز ریاضی, آنالیز عددی, جبر خطی و ماتریس‌ها, جبر مجرد]
+
+experience:
+  - initials: {en: B, fa: ب}
+    en:
+      role: Business Data Analysis Intern
+      org: Behnoodph
+      place: Tehran, Iran
+      dates: Sep 2026 – Present
+      points:
+        - Analyzing sales and financial data to support day-to-day business decisions.
+        - Building reports and dashboards in Excel and Power BI for the business team.
+        - Combining financial knowledge with programming to speed up recurring analyses.
+    fa:
+      role: کارآموز تحلیل داده کسب‌وکار
+      org: بهنود
+      place: تهران
+      dates: سپتامبر ۲۰۲۶ – اکنون
+      points:
+        - تحلیل داده‌های فروش و مالی برای پشتیبانی از تصمیم‌های روزمره کسب‌وکار.
+        - ساخت گزارش و داشبورد با Excel و Power BI برای تیم کسب‌وکار.
+        - ترکیب دانش مالی و برنامه‌نویسی برای سریع‌تر کردن تحلیل‌های تکراری.
+    tech: [Excel, Power BI, Financial Analysis, Programming]
+
+  - initials: {en: P, fa: م}
+    en:
+      role: Product Manager
+      org: Smart Housing Pricing Algorithm
+      place: Tehran, Iran
+      dates: Aug 2025 – Present
+      points:
+        - Leading the design of algorithms that estimate fair prices for houses and apartments.
+        - Turning market data into pricing features and product requirements.
+        - Working with the data end to end in Python, Pandas, SQL and R.
+    fa:
+      role: مدیر محصول
+      org: الگوریتم قیمت‌گذاری هوشمند مسکن
+      place: تهران
+      dates: اوت ۲۰۲۵ – اکنون
+      points:
+        - هدایت طراحی الگوریتم‌هایی که قیمت منصفانه خانه و آپارتمان را تخمین می‌زنند.
+        - تبدیل داده‌های بازار به ویژگی‌های قیمت‌گذاری و نیازمندی‌های محصول.
+        - کار با داده از ابتدا تا انتها با Python، Pandas، SQL و R.
+    tech: [Python, Pandas, SQL, R]
+
+  - initials: {en: T, fa: ت}
+    en:
+      role: Programming Instructor
+      org: Programming for teenagers (under 14)
+      place: Tehran, Iran
+      dates: Summer 2025
+      points:
+        - Taught the basic principles of programming to teenagers under 14 — a different and genuinely fun experience.
+        - Designed small hands-on exercises to make abstract ideas like loops and conditions click.
+    fa:
+      role: مدرس برنامه‌نویسی
+      org: آموزش برنامه‌نویسی به نوجوانان زیر ۱۴ سال
+      place: تهران
+      dates: تابستان ۱۴۰۴
+      points:
+        - آموزش مبانی برنامه‌نویسی به نوجوانان زیر ۱۴ سال؛ تجربه‌ای متفاوت و واقعاً جذاب.
+        - طراحی تمرین‌های کوچک و عملی تا مفاهیمی مثل حلقه و شرط برایشان جا بیفتد.
+    tech: [Teaching, Programming Basics]
+
+skills:
+  - en: Programming & data
+    fa: برنامه‌نویسی و داده
+    list: [Python, SQL, R, Pandas]
+  - en: Tools
+    fa: ابزارها
+    list: [Git, Excel, Power BI]
+  - en: Design
+    fa: طراحی
+    list: [Web Design, Product Design]

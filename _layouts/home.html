@@ -1,0 +1,54 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign h = site.data.cv.home[page.lang] %}
+{% assign prefix = "" %}{% if page.lang == "fa" %}{% assign prefix = "/fa" %}{% endif %}
+
+<section class="hero">
+  <p class="kicker">{{ t.skip }}:
+    <a href="{{ prefix | append: '/updates/' | relative_url }}">{{ t.updates }}</a> ·
+    <a href="{{ prefix | append: '/cv/' | relative_url }}">{{ t.cv }}</a> ·
+    <a href="{{ prefix | append: '/contact/' | relative_url }}">{{ t.contact }}</a> ·
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+  </p>
+  <h1>{{ h.hello }}</h1>
+  <p class="lead">{{ h.lead }}</p>
+  <p class="now"><span class="dot" aria-hidden="true"></span><span>{{ h.current_label }} <strong>{{ h.current }}</strong></span></p>
+</section>
+
+<section class="prose">
+  {% for para in h.about %}
+  <p>{{ para }}</p>
+  {% endfor %}
+
+  <h2>{{ h.focus_title }}</h2>
+  <ul class="focus">
+    {% for item in h.focus %}
+    <li>{{ item | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="latest">
+  <div class="section-head">
+    <h2>{{ t.latest }}</h2>
+    <a href="{{ prefix | append: '/updates/' | relative_url }}">{{ t.all_updates }} <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+  {% assign recent = site.posts | where: "lang", page.lang %}
+  {% if recent.size == 0 %}{% assign recent = site.posts %}{% endif %}
+  {% if recent.size > 0 %}
+  <ul class="post-list compact">
+    {% for post in recent limit:3 %}
+    <li>
+      <a href="{{ post.url | relative_url }}" dir="auto" lang="{{ post.lang }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="muted">{{ t.no_updates }}</p>
+  {% endif %}
+</section>
+
+<p class="reach">{{ h.reach }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
