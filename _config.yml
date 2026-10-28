@@ -11,7 +11,7 @@ baseurl: ""
 
 # Persian version: set to false to hide it — the language button and
 # Persian posts disappear from the site. Set back to true to bring it back.
-show_persian: true
+show_persian: false
 
 github_username: meysammahboudi
 email: mahboudi.me@gmail.com
